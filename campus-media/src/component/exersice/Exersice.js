@@ -7,23 +7,29 @@ import {Edit,Delete} from '@material-ui/icons';
 const useStyles = makeStyles((theme) => ({
     paper:{
         padding:20,
-        marginTop:10,
-        marginBottom:10,
-        height:400,
+        marginTop:5,
+        // height:400,
+        height: 'calc(100% - 10px)',
         overflow:'auto'
     },
     heading:{
         textTransform:'capitalize'
     },
-    // listitem:{
-    //     width:400
-    // }
+    container:{
+        height: 'calc(100% - 64px - 48px)'
+    },
+
+   '@global':{
+       'html,body,#root': {
+           height: '100%'
+       }
+   }
 }))
 
 const Exersice = () =>{
     const classes = useStyles();
     return (
-        <Grid container>
+        <Grid container className={classes.container}>
             <Grid item xs={12} sm={6}>
                 <Paper className={classes.paper}>
                 <Typography variant="h5" className={classes.heading}> Heading</Typography>
@@ -33,6 +39,7 @@ const Exersice = () =>{
                         <ListItemSecondaryAction>
                             <IconButton edge="end" aria-label="comments">
                                 <Edit />
+                       
                             </IconButton>
                             <IconButton edge="end" aria-label="comments">
                                 <Delete />

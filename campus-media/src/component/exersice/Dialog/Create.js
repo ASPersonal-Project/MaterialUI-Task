@@ -3,9 +3,7 @@ import {Button,TextField,Dialog,DialogActions,DialogContent,DialogContentText,Di
 import AddIcon from '@material-ui/icons/Add';
 
 const useStyle = makeStyles(() =>({
-    formcontroll: {
-        width:300
-    }
+   
 }))
 
 const Create = () => {
@@ -36,7 +34,8 @@ const Create = () => {
             id="filled-password-input"
             label="Exersices"
             type="text"
-            className={classes.formcontroll}
+            fullWidth='true'
+            maxWidth='md'
             />
             <br/>
             <TextField
